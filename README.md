@@ -1,4 +1,4 @@
-## RoboFusion: Machine Learning-Driven Sensor Integration for Motion Control
+# RoboFusion: Machine Learning-Driven Sensor Integration for Motion Control
 
 Team Members: Ankit Gole, Harsh Chhajed,  Shivam Shinde, Shreya Boyane, Simran Chauhan
 
@@ -50,3 +50,42 @@ _- MPU6050 Sensor:_ For measuring hand movement angles, which will be integrated
 - Performance Metrics: We will establish key performance indicators (KPIs) such as gesture recognition accuracy, response time, and movement precision. By conducting quantitative tests, we can showcase improvements over existing methods.
 - Real-World Scenarios: We will simulate various real-world applications, such as robotic-assisted surgeries or remote operations in hazardous environments. Demonstrating the tool in these contexts will highlight its practical benefits and versatility.
 - Comparative Analysis: We will compare our tool's performance against traditional robotic control methods, highlighting advantages such as enhanced precision, flexibility, and adaptability through machine learning integration.
+
+## Branching Strategy
+
+![Image](https://github.com/user-attachments/assets/7df4e810-02ff-4304-9905-8a6b1745bf5a)
+
+
+### 1. Main Branches
+- **main branch:** This is the stable branch with production-ready code. Only thoroughly reviewed and tested code is merged here.
+- **integration branch:** This branch is for integrating features before they’re finalized. All new features and bug fixes are merged into this branch first. Regularly updated from team members' contributions, it serves as the main staging area.
+
+### 2. Development Branches
+- **Feature branches (feature/branch-name):** Each team member should create a feature branch off `integration`for a specific task or feature. These branches focus on specific parts of the project (e.g., `feature/data-preprocessing`, `feature/model-selection`, etc.). Each `feature branch` is merged back into `integration`once complete.
+- Naming Convention:  ` feature/short-description`  (e.g., `feature/data-collection`, `feature/model-training`)
+
+- **Bugfix branches (bugfix/branch-name):** If issues arise during development, team members can create branches off `integration`for bug fixes. These branches are named descriptively (e.g., `bugfix/data-cleaning-issue`) and merged back into `integration`after testing.
+- Naming Convention:  `bugfix/short-description` (e.g., `bugfix/missing-values`, `bugfix/model-overfitting`)
+
+### 3. Pull Requests:
+When ready, team members open Pull Requests (PRs) from feature branches into integration, moving the linked task in GitHub Projects to Review.
+Other team members review the PR and suggest improvements if needed. Once approved, merge it into `integration`.
+
+## Workflow
+Planning and Assignment: Break down the project into distinct tasks (e.g., data preprocessing, feature engineering, model training, evaluation). Ensure that everyone has a clear feature branch in which to work.
+
+**Daily Development:**
+- Each team member pulls the latest integration branch and works on their respective feature branches.
+- Team members commit frequently and push updates to their feature branches.
+
+**Regular Integration:**
+- Designate short integration sessions (e.g., every 2-3 days) for all members to merge their feature branches into integration.
+- Review each feature branch with code reviews to check for any conflicts or issues.
+
+ **Testing and Finalizing:**
+- Toward the end of the project, focus on integrating and thoroughly testing the code in integration.
+- Conduct final testing and review on the `integration` branch, and then merge it into `main `once the project reaches a stable, production-ready state.
+
+
+## 7. Final Wrap-Up
+When the project is complete and ready to submit, ensure all code from `integration` is thoroughly tested and merged into `main` for the final version. Tag this final commit as **v1.0.**
